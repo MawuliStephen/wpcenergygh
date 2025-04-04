@@ -1,0 +1,5 @@
+/* nav-top.component.css */
+.rotate-180 {
+  transform: rotate(180deg);
+  transition: transform 200ms ease;
+}

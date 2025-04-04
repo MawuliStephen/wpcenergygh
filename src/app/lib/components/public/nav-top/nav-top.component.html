@@ -1,0 +1,128 @@
+<header class="sticky top-0 z-50 bg-[#f1f1f1] ">
+  <!-- Top Navigation -->
+  <nav class="border-b border-gray-200">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <!-- Logo (Left) -->
+        <div class="flex-shrink-0 flex items-center space-x-2 ">
+          <img class="h-12 w-auto" src="wpcenergy_logo.png" alt="wpcenergy Ghana">
+          <span class="uppercase flex items-center ">|</span>
+          <span class="uppercase font-semimedium text-[#F36E23] ">Ghana</span>
+
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex md:items-center md:justify-center text-[#333] uppercase md:flex-1">
+          <div class="flex space-x-8">
+            <a href="/" class="  hover:text-indigo-600 px-3 py-2 text-sm font-medium uppercase">Home</a>
+            <a href="/about" class=" hover:text-indigo-600 px-3 py-2 text-sm font-medium uppercase">About</a>
+            <a href="/contact" class=" hover:text-indigo-600 px-3 py-2 text-sm font-medium uppercase">Contact</a>
+          </div>
+        </div>
+
+        <!-- Desktop Buttons -->
+        <div class="hidden md:flex items-center space-x-4">
+          <!-- <button type="button" class="rounded-md bg-white px-3 py-2 text-sm font-medium text-indigo-600 hover:bg-gray-50 border border-indigo-600">EVENTS</button> -->
+          <button type="button" class="inline-block px-4 py-1 xl:py-3 xl:px-6 bg-[#F36E23] text-white uppercase font-medium border-2 border-transparent hover:border-[#F36E23] transition-all duration-300 hover:bg-white hover:text-[#F36E23] hover:shadow-sm">Become a member</button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button (click)="toggleMobileMenu()" type="button" class="inline-block px-1 py-1 bg-[#F36E23] text-white uppercase font-medium border-2 border-transparent hover:border-[#F36E23] transition-all duration-300 hover:bg-white hover:text-[#F36E23] hover:shadow-sm">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-6 w-6" [class.hidden]="isMobileMenuOpen" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <svg class="hidden h-6 w-6" [class.block]="isMobileMenuOpen" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bottom Navigation (Desktop only) -->
+  <nav class=" bg-[#f1f1f1] border-b border-gray-200 mb-0 hidden md:block ">
+    <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-12 items-center">
+        <div class="flex items-center space-x-8">
+          <a href="/news" class="text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">News</a>
+          
+          <!-- Become a Member Dropdown -->
+          <div class="relative" (mouseenter)="openDropdown('member')" (mouseleave)="closeDropdown('member')">
+            <button type="button" class="flex items-center text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">
+              Become a Member
+              <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            
+            <div *ngIf="activeDropdown === 'member'" class="absolute left-0 z-10 mt-2 w-48 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Benefits</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Pricing</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">How It Works</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="md:hidden">
+    <!-- Overlay Background -->
+    <div *ngIf="isMobileMenuOpen" 
+         class="fixed inset-0 bg-black bg-opacity-50 z-40"
+         (click)="toggleMobileMenu()">
+    </div>
+    
+    <!-- Sliding Menu -->
+    <div class="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out"
+         [class.translate-x-0]="isMobileMenuOpen"
+         [class.-translate-x-full]="!isMobileMenuOpen">
+      
+      <div class="h-full overflow-y-auto">
+        <div class="px-4 py-4 border-b border-gray-200">
+          <img class="h-8 w-auto" src="https://via.placeholder.com/150x50?text=Logo" alt="Your Company">
+        </div>
+        
+        <nav class="px-2 py-4">
+          <!-- Top Navigation Items -->
+          <div class="space-y-1">
+            <a href="#" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 rounded-md">Home</a>
+            <a href="#" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 rounded-md">About</a>
+            <a href="#" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 rounded-md">Contact</a>
+          </div>
+          
+          <!-- Bottom Navigation Items -->
+          <div class="mt-4 pt-4 border-t border-gray-200 space-y-1">
+            <a href="#" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 rounded-md">News</a>
+            
+            <!-- Become a Member Dropdown -->
+            <div>
+              <button (click)="toggleMemberDropdown()" type="button" class="w-full flex items-center justify-between px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 rounded-md">
+                <span>Become a Member</span>
+                <svg class="h-5 w-5" [class.rotate-180]="isMemberDropdownOpen" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              
+              <div *ngIf="isMemberDropdownOpen" class="pl-4 mt-1 space-y-1">
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-100 rounded-md">Benefits</a>
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-100 rounded-md">Pricing</a>
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-100 rounded-md">How It Works</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="mt-6 space-y-2">
+            <button type="button" class="w-full rounded-md bg-white px-3 py-2 text-base font-medium text-indigo-600 hover:bg-gray-50 border border-indigo-600">Login</button>
+            <button type="button" class="w-full rounded-md bg-indigo-600 px-3 py-2 text-base font-medium text-white hover:bg-indigo-700">Sign Up</button>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
