@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # or 'master' depending on your default branch
+      - main  # Change this if your default branch is different
 
 jobs:
   build-and-deploy:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
@@ -21,11 +21,14 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+
       - name: Build Angular App
         run: ng build --configuration production --base-href /wpcenergygh/
 
       - name: Deploy to GitHub Pages
         uses: angular-schule/angular-cli-ghpages@v1
         with:
-          base-href: /wpcenergygh
+          base-href: /wpcenergygh/
           build-dir: dist/wpcenergygh
