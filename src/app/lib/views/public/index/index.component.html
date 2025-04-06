@@ -1,0 +1,175 @@
+<!-- index.component.html -->
+
+<!-- index.component.html -->
+<div class="relative h-screen overflow-hidden">
+    <app-hero-slider />
+</div>
+
+<!-- Creative Transition Section -->
+<!-- <section class="relative py-20 bg-white overflow-hidden">
+    Floating abstract shapes
+    <div class="absolute -top-20 -left-20 w-64 h-64 bg-[#F36E23]/10 rounded-full mix-blend-multiply filter blur-xl"></div>
+    <div class="absolute bottom-10 -right-10 w-80 h-80 bg-blue-500/10 rounded-full mix-blend-multiply filter blur-xl"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        Animated grid pattern background
+        <div class="absolute inset-0 overflow-hidden opacity-10">
+            <div class="grid grid-cols-12 gap-1 h-full w-full">
+                @for (i of [1,2,3,4,5,6,7,8,9,10,11,12]; track $index) {
+                    @for (j of [1,2,3,4,5,6]; track $index) {
+                        <div class="bg-[#F36E23] animate-pulse" 
+                             [style.animation-delay.ms]="100 * ($index + j)"></div>
+                    }
+                }
+            </div>
+        </div>
+
+        Content
+        <div class="relative z-10 text-center max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#F36E23] to-blue-600">
+                Innovating Ghana's Energy Future
+            </h2>
+            
+            <div class="flex flex-col md:flex-row gap-8 mt-16">
+                Feature 1
+                <div class="flex-1 p-8 bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 mb-4 mx-auto bg-[#F36E23]/10 rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-[#F36E23]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Rapid Deployment</h3>
+                    <p class="text-gray-600">Our modular solutions can be deployed in record time to meet urgent energy needs.</p>
+                </div>
+                
+                Feature 2
+                <div class="flex-1 p-8 bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 mb-4 mx-auto bg-blue-500/10 rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Smart Technology</h3>
+                    <p class="text-gray-600">AI-powered systems optimize energy distribution and reduce waste.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<app-events />
+
+<div class=" flex  flex-row justify-center items-center py-20 bg-gray-50 text-center">
+    <div class="max-w-4xl px-4">
+        <h2 class="text-3xl font-bold text-gray-700 mb-6" data-aos="fade-up">Join the Energy Revolution</h2>
+        <p class="text-lg text-gray-700 mb-8" data-aos="fade-up" data-aos-delay="200">
+            Be part of a community that is committed to sustainable energy solutions. Our members enjoy exclusive access to resources, networking opportunities, and the latest industry insights.
+            <br>
+            <!-- Be part of Ghana's energy transformation. Sign up for our newsletter to stay updated on the latest
+            innovations and initiatives. -->
+        </p>
+        <a href="#about"
+            class="inline-block px-4 py-1 xl:py-3 xl:px-6 bg-[#F36E23] text-white uppercase font-medium border-2 border-transparent hover:border-[#F36E23] transition-all duration-300 hover:bg-white hover:text-[#F36E23] hover:shadow-sm"
+            data-aos="fade-up" data-aos-delay="400">Become A Member</a>
+    </div>
+
+</div>
+
+<!-- Section with Adinkra background -->
+<section class="relative py-20 bg-white">
+    <app-adinkra-background />
+
+    <!-- <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+                Ghanaian Wisdom in Modern Energy
+            </h2>
+            <p class="text-xl text-gray-600">
+                Our solutions are rooted in timeless Adinkra principles of community, strength, and sustainability
+            </p>
+        </div>
+
+        Your content here
+        <div class="grid md:grid-cols-3 gap-8 relative z-10">
+            Content cards would go here
+        </div>
+    </div> -->
+
+    <div class="container mx-auto flex flex-col gap-8 md:gap-12 lg:flex-row lg:items-stretch lg:justify-between px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+  
+        <!-- Image Column -->
+        <div class="flex justify-center lg:flex-1 lg:flex lg:items-center lg:justify-start">
+          <img
+            class="w-48 md:w-56 lg:w-64 xl:w-72 2xl:w-80"
+            alt="become a member"
+            src="/wpcworld.png"          
+          />
+        </div>
+      
+        <!-- Content Column -->
+        <div class="lg:flex-1 lg:flex lg:flex-col lg:justify-between">
+          <!-- <div>
+            <h2 class="text-[#F36E23] pb-4 border-b-2 border-gray-100 my-4 font-semibold text-xl lg:text-2xl text-left mx-0 md:mx-2 lg:mx-0">
+              Publications & News
+            </h2>
+            <h3 class="font-thin mb-4 text-sm md:text-base lg:text-lg xl:text-xl text-[#333]">
+              Become a part of Ghana's energy future and benefit from
+            </h3>
+
+             <div class="bg-gray-100 text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 p-4 mb-6">
+                <b>Title</b>
+                <p>
+                Become a part of Ghana's energy future and benefit from:
+                </p>
+             </div>
+             <div class="bg-gray-100 text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 p-4 mb-6">
+                <b>Title</b>
+                <p>
+                Become a part of Ghana's energy future and benefit from
+                </p>
+             </div>
+             <div class="bg-gray-100 text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 p-4 mb-6">
+                <b>Title</b>
+                <p>
+                Become a part of Ghana's energy future and benefit from
+                </p>
+             </div>
+             
+
+           
+          </div> -->
+          <app-news-publications-slider />
+      
+         
+        </div>
+      </div>
+</section>
+
+<!-- Features Section -->
+<!-- <section class="py-20 bg-blue-100" id="features">
+    <h2 class="text-3xl font-bold text-gray-800 text-center mb-8" data-aos="fade-up">Key Features</h2>
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-2xl font-semibold mb-4">Fast & Easy Setup</h3>
+            <p>Start using our system in minutes without the need for technical expertise.</p>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+            <h3 class="text-2xl font-semibold mb-4">Multi-Language Support</h3>
+            <p>Reach customers in their preferred language, making it easier for everyone to navigate your menu.</p>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+            <h3 class="text-2xl font-semibold mb-4">Analytics Dashboard</h3>
+            <p>Get insights into your menu’s performance and see what items your customers love the most.</p>
+        </div>
+    </div>
+</section> -->
+
+<!-- Call to Action Section -->
+<!-- <section class="py-20 bg-green-500 text-white text-center">
+    <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Ready to Get Started?</h2>
+    <p class="text-xl mb-8" data-aos="fade-up" data-aos-delay="200">Join hundreds of restaurants transforming their menu
+        experience with our digital solutions.</p>
+    <a href="#about"
+        class="bg-white text-green-500 hover:bg-green-100 py-2 px-6 rounded-lg text-xl transition ease-in-out duration-300"
+        data-aos="fade-up" data-aos-delay="400">Sign Up Now</a>
+</section> -->

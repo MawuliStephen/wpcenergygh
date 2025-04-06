@@ -28,7 +28,7 @@ import { RouterLink } from '@angular/router';
               <div class="animate-fadeIn [animation-delay:200ms]">
                 <a 
                   [routerLink]="slide.link" 
-                  class="inline-block px-8 py-3 bg-white rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  class="inline-block px-4 py-1 xl:py-3 xl:px-6 bg-white  font-semibold transition-all duration-300 hover:scale-105 uppercase"
                   [class]="slide.buttonColor + ' ' + slide.buttonHover"
                 >
                   {{ slide.buttonText }}
@@ -44,7 +44,7 @@ import { RouterLink } from '@angular/router';
         @for (slide of slides(); track slide.id; let i = $index) {
           <button 
             type="button"
-            class="h-2 rounded-full bg-white transition-all duration-300"
+            class="h-2  bg-white transition-all duration-300"
             [class]="currentIndex() === i ? 'w-8 bg-opacity-100' : 'w-4 bg-opacity-50'"
             (click)="goToSlide(i)"
             [attr.aria-current]="currentIndex() === i"

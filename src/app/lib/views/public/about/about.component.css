@@ -1,0 +1,23 @@
+.square-list {
+    list-style: none ;
+    padding-left: 0px;  
+  }
+  
+  .square-list li {
+    position:relative;
+    padding-left: 30px;
+  }
+  
+  .square-list li::before {
+    content: 'o';
+    width: 16px;
+    height:16px;
+    /* border-radius: 100%; */
+    background-color:#ee880b;
+    color:#ee880b ;
+    font-size: 10px;
+    position:absolute ;
+    left: 0;
+    top: 10%;
+  }
+  

@@ -12,7 +12,7 @@ import { RouterLink } from '@angular/router';
 
       <div class="flex flex-row items-center justify-between mb-8 border-b border-gray-200 ">
       <div class="text-left mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Upcoming Events</h2> 
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-700 mb-4">Upcoming Events</h2> 
           <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover our latest energy initiatives and community programs</p>
         </div>
 

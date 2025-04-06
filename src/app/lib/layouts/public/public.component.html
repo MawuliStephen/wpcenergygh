@@ -1,0 +1,27 @@
+<!-- public.component.html -->
+<div class="layout flex flex-col min-h-screen">
+
+  <!-- Navigation -->
+  <nav>
+    <app-nav-top></app-nav-top> <!-- Using NavTopComponent -->
+  </nav>
+
+  <!-- Main Content -->
+  <!-- <main class="  mx-auto">
+    flex-grow
+    md:container
+    <router-outlet></router-outlet>
+  </main> -->
+  
+  <div>
+    <router-outlet></router-outlet>
+
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <app-footer></app-footer> <!-- Using FooterComponent -->
+  </footer>
+
+</div>

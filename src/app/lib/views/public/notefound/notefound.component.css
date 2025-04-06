@@ -1,0 +1,138 @@
+/* Base styles */
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background-color: #f8f9fa; */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .content-wrapper {
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .error-code {
+    font-size: 8rem;
+    font-weight: 900;
+    color: #343a40;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  
+  .error-title {
+    font-size: 2rem;
+    color: #212529;
+    margin-bottom: 15px;
+  }
+  
+  .error-message {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 30px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  /* .home-button, .contact-button {
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .home-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .home-button:hover {
+    background-color: #0069d9;
+  } */
+  
+  /* .contact-button {
+    background-color: white;
+    color: #007bff;
+    border: 1px solid #007bff;
+  }
+  
+  .contact-button:hover {
+    background-color: #f8f9fa;
+  }
+   */
+  .search-box {
+    display: flex;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .search-box input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+  }
+  
+  .search-box button {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .search-box button:hover {
+    background-color: #218838;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .error-code {
+      font-size: 6rem;
+    }
+    
+    .error-title {
+      font-size: 1.8rem;
+    }
+    
+    .error-message {
+      font-size: 1rem;
+    }
+    
+    .action-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .home-button, .contact-button {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .error-code {
+      font-size: 4rem;
+    }
+    
+    .search-box {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .search-box input,
+    .search-box button {
+      border-radius: 5px;
+      width: 100%;
+    }
+  }
