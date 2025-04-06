@@ -1,0 +1,10 @@
+{
+  "routes": {
+    "/wpcenergygh": {},
+    "/wpcenergygh/about": {},
+    "/wpcenergygh/about/committees": {},
+    "/wpcenergygh/about/membership": {},
+    "/wpcenergygh/contact": {},
+    "/wpcenergygh/oops": {}
+  }
+}
