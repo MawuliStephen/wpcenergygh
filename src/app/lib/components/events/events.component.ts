@@ -9,17 +9,17 @@ import { RouterLink } from '@angular/router';
   template: `
     <section class="py-16 bg-gradient-to-b from-white to-bg-[#f1f1f1]">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between mb-8 border-b border-gray-200">
+  <div class="text-left mb-12 md:mb-0">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-700 mb-4">Upcoming Events</h2>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover our latest energy initiatives and community programs</p>
+  </div>
 
-      <div class="flex flex-row items-center justify-between mb-8 border-b border-gray-200 ">
-      <div class="text-left mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-700 mb-4">Upcoming Events</h2> 
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover our latest energy initiatives and community programs</p>
-        </div>
-
-        <a href="/events"  class="inline-block px-4 py-1 xl:py-3 xl:px-6 bg-[#F36E23] text-white uppercase font-medium border-2 border-transparent hover:border-[#F36E23] transition-all duration-300 hover:bg-white hover:text-[#F36E23] hover:shadow-sm">
-       All Events
-      </a>
+  <a href="/events" class="inline-block w-full md:w-auto px-4 py-1 xl:py-3 xl:px-6 bg-[#F36E23] text-white uppercase font-medium border-2 border-transparent hover:border-[#F36E23] transition-all duration-300 hover:bg-white hover:text-[#F36E23] hover:shadow-sm">
+    All Events
+  </a>
 </div>
+
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4 border-b border-gray-200">
           @for (event of events(); track event.id) {

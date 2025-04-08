@@ -10,7 +10,8 @@
     "build:ssr": "ng build && ng run wpcenergygh:server:production",
     "serve:ssr": "node dist/wpcenergygh/server/server.mjs",
     "dev:ssr": "ng run wpcenergygh:serve-ssr",
-    "deploy": "npm run build:ssr && npm --prefix functions run build && firebase deploy"
+    "deploy": "npm run build:ssr && npm --prefix functions run build && firebase deploy",
+    "lint": "eslint ."
   },
   "private": true,
   "dependencies": {
@@ -40,7 +41,6 @@
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
-    "angular-cli-ghpages": "^2.0.3",
     "autoprefixer": "^10.4.21",
     "jasmine-core": "~5.5.0",
     "karma": "~6.4.0",
